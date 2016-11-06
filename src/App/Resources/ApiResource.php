@@ -3,7 +3,7 @@
 
 namespace Iscape\App\Resources;
 use Iscape\App\Manager\ApiManager;
-use Iscape\App\Services\RenderService;
+use Iscape\App\Services\Render\RenderService;
 
 /**
  * Created by PhpStorm.

@@ -3,10 +3,8 @@
 namespace Iscape\App\Services\Render;
 
 /**
- * Class JsonFactory
- *
- * JsonFactory is a factory for creating a family of JSON component
- * (example for ajax)
+ * Class RawFactory
+ * @package Iscape\App\Services\Render
  */
 class RawFactory extends AbstractRenderFactory
 {
@@ -17,7 +15,7 @@ class RawFactory extends AbstractRenderFactory
      * @param string $path
      * @param string $name
      *
-     * @return Json\Picture|Picture
+     * @return Raw\Picture|Picture
      */
     public function createPicture($path, $name = '')
     {
@@ -29,7 +27,7 @@ class RawFactory extends AbstractRenderFactory
      *
      * @param string $content
      *
-     * @return Json\Text|Text
+     * @return Raw\Text|Text
      */
     public function createText($content)
     {

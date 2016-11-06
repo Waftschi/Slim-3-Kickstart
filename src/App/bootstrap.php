@@ -17,7 +17,7 @@ $container['renderService'] = function($c) {
     $htmlFactory =  new \Iscape\App\Services\Render\HtmlFactory();
     $jsonFactory = new \Iscape\App\Services\Render\JsonFactory();
     $rawFactory = new \Iscape\App\Services\Render\RawFactory();
-    return new \Iscape\App\Services\RenderService($htmlFactory, $jsonFactory, $rawFactory);
+    return new \Iscape\App\Services\Render\RenderService($htmlFactory, $jsonFactory, $rawFactory);
 };
 
 $container['apiServiceFactory'] = function($c) {
