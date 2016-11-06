@@ -13,6 +13,6 @@ class ApiServiceDefault implements ApiServiceInterface
 {
     public function getResult()
     {
-        return 'zzzzzZ';
+        return 'zzzzzZ-api-result';
     }
 }

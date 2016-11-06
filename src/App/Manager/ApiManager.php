@@ -31,9 +31,9 @@ class ApiManager
      * @param $name
      * @return \Iscape\App\Services\Api\ApiServiceDefault|\Iscape\App\Services\Api\ApiServiceMaeh|\Iscape\App\Services\Api\ApiServiceMuh
      */
-    public function getApiService($name)
+    public function getApiService($id)
     {
-        return $this->factory->createApiService($name);
+        return $this->factory->createApiService($id);
     }
 
 

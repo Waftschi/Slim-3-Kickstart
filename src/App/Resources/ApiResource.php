@@ -34,10 +34,11 @@ class ApiResource
      * @param $type
      * @return string
      */
-    public function getResponse($type) {
+    public function getResponse($type, $responseType) {
         $service = $this->apiManager->getApiService($type);
         $result =  $service->getResult();
-        return $this->renderService->render($result);
+
+        return $this->renderService->render($result, $responseType);
     }
 
 }

@@ -13,6 +13,6 @@ class ApiServiceMuh implements ApiServiceInterface
 
     public function getResult()
     {
-        return 'muh';
+        return 'muh-api-result';
     }
 }

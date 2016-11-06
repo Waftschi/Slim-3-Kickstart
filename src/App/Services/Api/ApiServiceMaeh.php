@@ -13,6 +13,6 @@ class ApiServiceMaeh implements ApiServiceInterface
 {
     public function getResult()
     {
-        return 'maeh';
+        return 'maeh-api-result';
     }
 }
