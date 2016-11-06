@@ -8,9 +8,6 @@
 
 namespace Iscape\App\Services\Render;
 
-use Iscape\App\Services\Render\HtmlFactory;
-use Iscape\App\Services\Render\JsonFactory;
-use Iscape\App\Services\Render\RawFactory;
 
 class RenderService
 {
@@ -26,7 +23,7 @@ class RenderService
     private $jsonFactory;
 
     /**
-     * @var JsonFactory
+     * @var RawFactory
      */
     private $rawFactory;
 
@@ -61,10 +58,10 @@ class RenderService
                 break;
         }
 
-        try {
+        if ($result instanceof MediaInterface) {
             return $result->render();
-        } catch (\Exception $e) {
-            return $e->getTraceAsString();
         }
+
+        return null;
     }
 }
