@@ -32,7 +32,22 @@ $container['apiResource'] = function($c) {
     return new \Iscape\App\Resources\ApiResource($c['apiManager'], $c['renderService']);
 };
 
-
 $app = new \Slim\App($container);
+
+$app->add(function ($request, $response, $next) {
+
+    /** @var \Iscape\App\Manager\ApiManager $manager*/
+    $manager = $this->get('apiManager');
+
+
+
+    $response->getBody()->write('BEFORE');
+    $response->getBody()->write($manager->getApiService('test')->getResult());
+   // echo $manager->getApiService('test')->getResult();
+    $response = $next($request, $response);
+    $response->getBody()->write('AFTER');
+
+    return $response;
+});
 
 
